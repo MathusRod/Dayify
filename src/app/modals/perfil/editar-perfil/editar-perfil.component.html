@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="icon">
+    <div>
+      <img src="../../../../assets/user _ account _ profile.svg" alt="" class="foto">
+    </div>
+    <span>Alterar foto de perfil</span>
+  </div>
+  <form>
+    <div class="input-container">
+      <label for="nome">Admin</label>
+      <input type="text" name="nome" id="nome" [readOnly]="nomeReadonly">
+      <img src="../../../../assets/pen _ edit.svg" alt="" (click)="editarNome()">
+    </div>
+    <div class="input-container">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" [readOnly]="emailReadonly">
+      <img src="../../../../assets/pen _ edit.svg" alt="" (click)="editarEmail()">
+    </div>  
+  </form>
+  <button class="salvar" (click)="salvarEdicao()">Salvar</button>
+</div>

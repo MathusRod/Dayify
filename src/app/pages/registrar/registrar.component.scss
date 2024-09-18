@@ -1,0 +1,82 @@
+@import "../../shared/mixin";
+.container {
+  @include containerPadrao;
+  .container-logo {
+    display: flex;
+    gap: 25px;
+    .provisorio {
+      width: 139px;
+      height: 107px;
+        // border: 3px solid black;
+
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #424242;
+      margin: auto 0;
+    }
+  }
+  .container-cadastro {
+    padding-top: 37px;
+    width: 860px;
+    height: 590px;
+    border: 2px solid #424242;
+    @include flexColumn;
+    align-items: center;
+    gap: 16px;
+    h1 {
+      font-size: 48px;
+      font-weight: normal;
+      color: #424242;
+    }
+    form {
+      .input-container {
+        position: relative;
+        @include flexColumn;
+        label {
+          font-size: 20px;
+          font-weight: normal;
+          color: #424242;
+          margin-bottom: 8px;
+        }
+        input {
+          width: 370px;
+          height: 44px;
+          margin-bottom: 32px;
+          border: 2px solid #424242;
+          font-size: 18px;
+          padding: 10px;
+          &.error {
+            border-color: red;
+          }
+          &#confimar-senha{
+            margin-bottom: 10px;
+          }
+        }
+        .mostrar-senha {
+          position: absolute;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          background: none;
+          border: none;
+          right: 3%;
+          bottom: 32%;
+          &.confirmar{
+            bottom: 15%;
+          }
+        }
+      }
+
+    }
+    .btn-cadastrar {
+      background-color: #424242;
+      width: 159px;
+      height: 40px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}

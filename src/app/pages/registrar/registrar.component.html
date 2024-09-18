@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="container-logo">
+    <img class="provisorio" src="../../../assets/reshot-icon-calendar-number-W85XU64MP9.svg" alt="Logo">
+    <!-- <div class="provisorio"></div> -->
+    <h1>Dayify</h1>
+  </div>
+  <div class="container-cadastro">
+    <h1 class="titulo">Cadastro</h1>
+    <form [formGroup]="formRegistrar">
+      <div class="input-container">
+        <label>Nome de usuário</label>
+        <input type="text" required formControlName="nomeUsuario" [class.error]="(formRegistrar.get('nomeUsuario')?.hasError('nomeUsuario') || formRegistrar.get('nomeUsuario')?.hasError('required')) && formRegistrar.get('nomeUsuario')?.touched">
+      </div>
+      <div class="input-container">
+        <label>Enter your email</label>
+        <input type="email" placeholder="example@email.com" required formControlName="email" [class.error]="(formRegistrar.get('email')?.hasError('email') || formRegistrar.get('email')?.hasError('required')) && formRegistrar.get('email')?.touched">
+      </div>
+      <div class="input-container">
+        <label>Senha</label>
+        <input [type]="inputShowPassword" required formControlName="senha" [class.error]="(formRegistrar.get('senha')?.hasError('senha') || formRegistrar.get('senha')?.hasError('required')) && formRegistrar.get('senha')?.touched">
+        <button class="mostrar-senha" (click)="mostrarSenha(1)">
+          <img src="../../../assets/Eye.svg" alt="">
+        </button>
+      </div>
+      <div class="input-container">
+        <label>Confirmar senha</label>
+        <input [type]="inputShowConfirmPassword" required id="confimar-senha" formControlName="confirmarSenha">
+        <button class="mostrar-senha confirmar" (click)="mostrarSenha(2)">
+          <img src="../../../assets/Eye.svg" alt="">
+        </button>
+      </div>
+    </form>
+    <button class="btn-cadastrar" (click)="registrar()">Cadastrar</button>
+  </div>
+</div>

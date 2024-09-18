@@ -1,0 +1,45 @@
+<div class="container">
+  <form>
+    <div class="input-nome-evento div-input">
+      <h1>{{ salvarOsEventos[id].nome }}</h1>
+    </div>
+    <div class="data-hora ">
+      <div class="data div-input">
+        <h2 for="data" class="titulo">
+          Data
+        </h2>
+        <p>{{ salvarOsEventos[id].data | date: 'dd/MM/yyyy' }}</p>
+      </div>
+      <div class="hora div-input">
+        <h2 for="hora" class="titulo">
+          Horário
+        </h2>
+        <p>{{ salvarOsEventos[id].horario }}</p>
+      </div>
+    </div>
+    <!-- <div class="lembretes div-input">
+      <p class="titulo">lembretes</p>
+    </div> -->
+    <div class="descricao div-input">
+      <p class="titulo">Descrição</p>
+      @if(salvarOsEventos[id].descricao.length > 1){
+        <textarea name="descricao" id="descricao" maxlength="237" readonly>{{ salvarOsEventos[id].descricao }}</textarea>
+      } @else {
+        <textarea name="descricao" id="descricao" maxlength="237" readonly>Nenhuma descrição</textarea>
+      }
+      
+    </div>
+    <!-- <div class="convidados div-input">
+      <h2 for="email" class="titulo">Convidados</h2>
+      <ul>
+        <div class="container-list">
+          <li>usuario 1</li>
+          <li>usuario 2</li>
+          <li>usuario 3</li>
+        </div>
+      </ul>
+    </div> -->
+  </form>
+  <button class="Editar" (click)="openEditarEvento()">Editar Evento</button>
+  <img class="close" src="../../../../assets/close _ cancel.svg" alt="" (click)="close()">
+</div>

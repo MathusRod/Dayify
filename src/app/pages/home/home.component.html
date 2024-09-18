@@ -1,0 +1,66 @@
+<!-- <button (click)="deslogar()">Logout</button> -->
+<div class="container">
+  <header>
+    <div class="container-logo">
+      <img class="provisorio" src="../../../assets/reshot-icon-calendar-number-W85XU64MP9.svg" alt="Logo">
+      <!-- <div class="provisorio"></div> -->
+    </div>
+    <div class="icones">
+      <!-- <button class="notificacao" (click)="chamarModalNotificacao()">
+        <img src="../../../assets/alarm _ notification _ message.svg" alt="">
+      </button> -->
+      <button class="perfil" (click)="chamarModalPerfil()">
+        <img src="../../../assets/user _ account _ profile.svg" alt="">
+        @if(modalPefilOpen){
+          <app-modal-perfil class="modal-perfil"></app-modal-perfil>
+        }
+      </button>
+    </div>
+  </header>
+  <section class="conteudo">
+    <div class="eventos">
+      <h1>Eventos</h1>
+      <!--provisórios-->
+      <div class="todos-eventos">
+        <!-- <div class="evento">
+          <h4>Nome do evento</h4>
+          <p>14/05 - 15:00</p>
+          <button (click)="openDetalhes()">Ver detalhes</button>
+        </div>
+        <div class="evento">
+          <h4>Nome do evento</h4>
+          <p>14/05 - 15:00</p>
+          <button>Ver detalhes</button>
+        </div>
+        <div class="evento">
+          <h4>Nome do evento</h4>
+          <p>14/05 - 15:00</p>
+          <button>Ver detalhes</button>
+        </div>
+        <div class="evento">
+          <h4>Nome do evento</h4>
+          <p>14/05 - 15:00</p>
+          <button>Ver detalhes</button>
+        </div> -->
+        @if(salvarOsEventos.length){
+          @for(evento of salvarOsEventos; track evento; let idx = $index){
+            <div class="evento">
+              <h4>{{ evento.nome }}</h4>
+              <p>{{ evento.data | date: 'dd/MM/yyyy'  }} - {{ evento.horario }}</p>
+              <button (click)="openDetalhes(idx)">Ver detalhes</button>
+            </div>
+          }
+        } @else {
+          <h2>Nenhum evento</h2>
+        }
+      </div>
+      <div class="btn-criar">
+        <button class="criar-evento" (click)="openCriarEvento()">Criar evento</button>
+      </div>
+    </div>
+    <div class="calendar">
+      <mat-calendar></mat-calendar>
+    </div>
+  </section>
+  
+</div>

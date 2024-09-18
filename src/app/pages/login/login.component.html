@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="container-logo">
+    <img class="provisorio" src="../../../assets/reshot-icon-calendar-number-W85XU64MP9.svg" alt="Logo">
+    <!-- <div class="provisorio"></div> -->
+    <h1>Dayify</h1>
+  </div>
+  <div class="container-login">
+    <h2>Login</h2>
+    <div class="container-login-input">
+      <form [formGroup]="formLogin">
+        <div class="campo-input">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" [class.error]="(formLogin.get('email')?.hasError('email') || formLogin.get('email')?.hasError('required')) && formLogin.get('email')?.touched">
+        </div>
+        <div class="campo-input">
+          <label for="senha">Senha</label>
+          <input [type]="inputPasswordType" id="senha" formControlName="senha" [class.error]="(formLogin.get('senha')?.hasError('senha') || formLogin.get('senha')?.hasError('required')) && formLogin.get('senha')?.touched">
+          <button class="mostrar-senha" (click)="mostrarSenha()">
+            <img src="../../../assets/Eye.svg" alt="">
+          </button>
+        </div>
+        <div class="links">
+          <a routerLink="/registrar">Fazer cadastro</a>
+          <a routerLink="/recuperar-senha">Esqueci a senha</a>
+        </div>
+      </form>
+    </div>
+    <button class="logar" (click)="logar()">
+      Login
+    </button>
+  </div>
+</div>

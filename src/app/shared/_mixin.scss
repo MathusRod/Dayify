@@ -1,0 +1,17 @@
+@mixin flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexCentralizado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin containerPadrao{
+  width: 100vw;
+  height: 100vh;
+  @include flexColumn;
+  align-items: center;
+  padding-top: 100px;
+  gap: 52px;
+}

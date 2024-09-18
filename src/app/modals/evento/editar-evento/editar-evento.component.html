@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>Editar evento</h1>
+  <form [formGroup]="formEditarEvento">
+    <div class="input-nome-evento div-input">
+      <label for="nomeEvento" class="titulo" >{{salvarEvento[id].nome}}</label>
+      <input type="text" id="nomeEvento" [value]="salvarEvento[id].nome" formControlName="nome">
+    </div>
+    <div class="data-hora ">
+      <div class="data div-input">
+        <label for="data" class="titulo">
+          Data
+        </label>
+        <input [matDatepicker]="datepicker" readonly formControlName="data" >
+        <mat-datepicker-toggle matIconSuffix [for]="datepicker" ></mat-datepicker-toggle>
+        <mat-datepicker #datepicker disabled="false">
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button matDatepickerApply>Aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </div>
+      <div class="hora div-input">
+        <label for="hora" class="titulo">
+          Horário
+        </label>
+        <input type="time" formControlName="horario">
+      </div>
+    </div>
+    <!-- <div class="lembretes div-input">
+      <p class="titulo">lembretes</p>
+    </div> -->
+    <div class="descricao div-input">
+      <p class="titulo">Descrição</p>
+      <textarea name="descricao" id="descricao" maxlength="237" formControlName="descricao" [value]="salvarEvento[id].descricao"></textarea >
+    </div>
+    <!-- <div class="add-convidados div-input">
+      <div class="input-add-email">
+        <label for="email" class="titulo">Adicionar convidados</label>
+        <input type="email" id="email" placeholder="Email" formControlName="email">
+        <img src="../../../../assets/add _ create.svg" alt="">
+      </div>   
+      <ul>
+        <div class="container-list">
+          <li>usuario 1</li>
+          <li>usuario 2</li>
+          <li>usuario 3</li>
+        </div>
+      </ul>
+    </div> -->
+  </form>
+  <button class="salvar" (click)="salvar()">Salvar</button>
+  <img class="close" src="../../../../assets/close _ cancel.svg" alt="" (click)="close()">
+</div>

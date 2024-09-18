@@ -1,0 +1,27 @@
+.container{
+  width: 450px;
+  height: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-size: 26px;
+    color: #424242;
+  }
+  .botoes{
+    display: flex;
+    gap: 20px;
+    button{
+      background-color: #424242;
+      border: none;
+      width: 150px;
+      height: 50px;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+  
+}

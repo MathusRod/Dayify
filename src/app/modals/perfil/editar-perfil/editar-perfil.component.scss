@@ -1,0 +1,63 @@
+.container {
+  width: 468px;
+  height: 478px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+      .foto {
+        width: 100%;
+      }
+    }
+    span {
+      font-size: 14px;
+      color: #767778;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    .input-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 15px;
+      label {
+        font-size: 20px;
+        color: #424242;
+      }
+      input {
+        width: 370px;
+        height: 45px;
+        padding: 5px 7px;
+        color: #424242;
+        font-size: 18px;
+      }
+      img{
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+  .salvar {
+    width: 160px;
+    height: 35px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #424242;
+    text-align: center;
+  }
+}

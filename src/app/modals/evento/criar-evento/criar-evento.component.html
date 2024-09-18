@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Criar novo evento</h1>
+  <form [formGroup]="formCriarEvento">
+    <div class="input-nome-evento div-input">
+      <label for="nomeEvento" class="titulo">Nome do evento</label>
+      <input type="text" id="nomeEvento" formControlName="nome">
+    </div>
+    <div class="data-hora ">
+      <div class="data div-input">
+        <label for="data" class="titulo">
+          Data
+        </label>
+        <input [matDatepicker]="datepicker" formControlName="data" readonly>
+        <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker disabled="false">
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button matDatepickerApply>Aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </div>
+      <div class="hora div-input">
+        <label for="hora" class="titulo">
+          Horário
+        </label>
+        <input type="time" formControlName="horario">
+      </div>
+    </div>
+    <!-- <div class="lembretes div-input">
+      <p class="titulo">lembretes</p>
+    </div> -->
+    <div class="descricao div-input">
+      <p class="titulo">Descrição</p>
+      <textarea name="descricao" id="descricao" maxlength="237" formControlName="descricao"></textarea>
+    </div>
+    <!-- <div class="add-convidados div-input">
+      <label for="email" class="titulo">Adicionar convidados</label>
+      <input type="email" id="email" placeholder="Email" formControlName="email">
+      <img src="../../../../assets/add _ create.svg" alt="">
+    </div> -->
+  </form>
+  <button class="salvar" (click)="salvar()">Salvar</button>
+  <img class="close" src="../../../../assets/close _ cancel.svg" alt="" (click)="close()">
+</div>

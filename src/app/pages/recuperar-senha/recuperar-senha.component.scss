@@ -1,0 +1,84 @@
+@import "../../shared/mixin";
+.container {
+  @include containerPadrao;
+  .container-logo {
+    display: flex;
+    gap: 25px;
+    .provisorio {
+      width: 139px;
+      height: 107px;
+        // border: 3px solid black;
+
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #424242;
+      margin: auto 0;
+    }
+  }
+  .container-redefinir {
+    padding-top: 37px;
+    width: 860px;
+    height: 560px;
+    border: 2px solid #424242;
+    @include flexColumn;
+    align-items: center;
+    gap: 63px;
+    h2 {
+      font-size: 48px;
+      font-weight: normal;
+      color: #424242;
+    }
+    .container-redefinir-input {
+      form {
+        @include flexColumn;
+        .campo-input {
+          @include flexColumn;
+          label {
+            font-size: 20px;
+            font-weight: normal;
+            color: #424242;
+            margin-bottom: 13px;
+          }
+          input {
+            width: 370px;
+            height: 44px;
+            border: 2px solid #424242;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 20px;
+          }
+          
+        }
+        .enviar-codigo{
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+          .botao-enviar-codigo{
+            width: 137px;
+            height: 30px;
+            background-color: #424242;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+          }
+          span{
+            height: 20px;
+            margin: auto 0;
+            font-size: 16px;
+            color: #767778;
+          }
+        }}
+        }
+    .enviar {
+      background-color: #424242;
+      width: 159px;
+      height: 40px;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
