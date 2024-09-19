@@ -18,7 +18,8 @@ export class EditarEventoComponent {
   formEditarEvento: FormGroup = this.formBuilder.group({
     nome: ['', Validators.required],
     data: ['', Validators.required],
-    horario: ['', Validators.required],
+    hora: ['', Validators.required],
+    minuto: ['', Validators.required],
     descricao: ['']
   })
   close(){
@@ -36,7 +37,8 @@ export class EditarEventoComponent {
     this.salvarEvento[this.id].data = this.formEditarEvento.value.data
     console.log(this.salvarEvento[this.id].data)
 
-    this.salvarEvento[this.id].horario = this.formEditarEvento.value.horario
+    this.salvarEvento[this.id].hora = this.formEditarEvento.value.hora
+    this.salvarEvento[this.id].minuto = this.formEditarEvento.value.minuto
     this.salvarEvento[this.id].descricao = this.formEditarEvento.value.descricao
     this.close()
   }

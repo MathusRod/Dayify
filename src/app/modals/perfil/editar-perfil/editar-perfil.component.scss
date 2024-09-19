@@ -1,3 +1,4 @@
+@import "../../../../styles.scss";
 .container {
   width: 468px;
   height: 478px;
@@ -19,7 +20,8 @@
     }
     span {
       font-size: 14px;
-      color: #767778;
+      color: $principal;
+      cursor: pointer;
     }
   }
   form {
@@ -57,7 +59,7 @@
     height: 35px;
     font-size: 20px;
     color: #fff;
-    background-color: #424242;
+    background-color: $principal;
     text-align: center;
   }
 }

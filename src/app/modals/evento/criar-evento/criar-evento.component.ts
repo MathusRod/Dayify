@@ -19,7 +19,8 @@ export class CriarEventoComponent {
   formCriarEvento: FormGroup = this.formBuilder.group({
     nome: ['', Validators.required],
     data: ['', Validators.required],
-    horario: ['', Validators.required],
+    hora: ['', Validators.required],
+    minuto: ['', Validators.required],
     descricao: ['']
   })
 

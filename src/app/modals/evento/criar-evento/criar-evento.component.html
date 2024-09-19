@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Criar novo evento</h1>
+  <h1>Criar evento</h1>
   <form [formGroup]="formCriarEvento">
     <div class="input-nome-evento div-input">
       <label for="nomeEvento" class="titulo">Nome do evento</label>
@@ -21,9 +21,18 @@
       </div>
       <div class="hora div-input">
         <label for="hora" class="titulo">
-          Horário
+          Selecionar horário
         </label>
-        <input type="time" formControlName="horario">
+        <div class="inputs">
+          <div class="input-hora">
+            <input type="number" formControlName="hora" min="0" max="24" class="no-spin">
+            <p>Hora</p>
+          </div>
+          <div class="input-minuto">
+            <input type="number" formControlName="minuto" min="0" max="60" class="no-spin">
+            <p>Minuto</p>
+          </div>
+        </div>
       </div>
     </div>
     <!-- <div class="lembretes div-input">

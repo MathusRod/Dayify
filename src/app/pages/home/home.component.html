@@ -6,9 +6,9 @@
       <!-- <div class="provisorio"></div> -->
     </div>
     <div class="icones">
-      <!-- <button class="notificacao" (click)="chamarModalNotificacao()">
+      <button class="notificacao" (click)="chamarModalNotificacao()">
         <img src="../../../assets/alarm _ notification _ message.svg" alt="">
-      </button> -->
+      </button>
       <button class="perfil" (click)="chamarModalPerfil()">
         <img src="../../../assets/user _ account _ profile.svg" alt="">
         @if(modalPefilOpen){
@@ -46,7 +46,7 @@
           @for(evento of salvarOsEventos; track evento; let idx = $index){
             <div class="evento">
               <h4>{{ evento.nome }}</h4>
-              <p>{{ evento.data | date: 'dd/MM/yyyy'  }} - {{ evento.horario }}</p>
+              <p> {{ evento.data | date: 'dd/MM'  }} - {{evento.hora}}:{{ evento.minuto}} </p>
               <button (click)="openDetalhes(idx)">Ver detalhes</button>
             </div>
           }

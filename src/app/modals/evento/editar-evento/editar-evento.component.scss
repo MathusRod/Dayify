@@ -1,5 +1,5 @@
 @import "../../../shared/mixin";
-
+@import "../../../../styles.scss";
 .container {
   display: flex;
   flex-direction: column;
@@ -42,30 +42,41 @@
     }
     .data-hora{
       display: flex;
-      justify-content: space-between;
+      gap: 1rem;
       .data{
         position: relative;
         input{
           margin-top: 10px;
           width: 140px;
           height: 30px;
+          color: $principal;
         }
         mat-datepicker-toggle{
           position: absolute;
           left: 100px;
-          bottom: -10px;
+          top: 22px;
         }
       }
       .hora{
-        width: 140px;
+        width: 218px;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        input{
-          margin-top: 10px;
-          width: 70px;
-          height: 30px;
-          padding:0 10px;
+        border: 1px solid $principal;
+        label{
           font-size: 14px;
+        }
+        .inputs{
+          display: flex;
+          gap: 1rem;
+          input{
+            margin-top: 10px;
+            width: 73px;
+            height: 72px;
+            font-size: 45px;
+            background-color: $cinza;
+            color: $preto;
+          }
         }
       }
     }
@@ -135,4 +146,13 @@
     height: 30px;
     cursor: pointer;
   }
+}
+.no-spin {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
 }

@@ -21,5 +21,8 @@ export class DetalhesEventoComponent {
     this.dialog.open(EditarEventoComponent)
   }
   salvarOsEventos = this._eventos.arrayDeEventos;
+  ngOnInit(){
+    this.salvarOsEventos[this.id].data = new Date(this.salvarOsEventos[this.id].data)
+  }
   id = this._eventos.id
 }

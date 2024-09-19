@@ -1,5 +1,5 @@
 @import "../../../shared/mixin";
-
+@import "../../../../styles.scss";
 .container {
   display: flex;
   flex-direction: column;
@@ -10,8 +10,9 @@
   position: relative;
   h1 {
     font-size: 36px;
-    color: #424242;
+    color: $preto;
     margin-top: 3rem;
+    text-align: center;
   }
   form {
     width: 320px;
@@ -31,6 +32,10 @@
       input{
         padding-left: 10px;
       }
+
+    }
+    p{
+      color: $principal;
     }
     .input-nome-evento {
 
@@ -54,14 +59,14 @@
         height: 110px;
         resize: none;
         padding: 4px;
-        border: 1.5px solid  black;
+        border: 1.5px solid  $principal;
       }
     }
     .convidados{
       ul{
         margin-left: 5px;
         padding: 5px 10px;
-        border-left: 1px solid black;
+        border-left: 1px solid $principal;
         .container-list{
           width: 200px;
           overflow-y:scroll;
@@ -76,7 +81,7 @@
   }
 
   .Editar {
-    background-color: #424242;
+    background-color: $principal;
     width: 159px;
     height: 40px;
     text-align: center;

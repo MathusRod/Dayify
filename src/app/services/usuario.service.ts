@@ -4,21 +4,22 @@ import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { IUsuario } from '../interfaces/IUsuario';
-
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class UsuarioService {
-  constructor(private _httpClient: HttpClient, private _router: Router) {}
 
+  constructor(private _httpClient: HttpClient, private _router: Router) {}
+  apiUrl = environment.apiUrl
   logar(usuario: IUsuario): Observable<any> {
-    /*return this.httpClient.post<any>(apiUrlUsuario + "/login", usuario).pipe(
-      tap((resposta) => {
-        if(!resposta.sucesso) return;
-        localStorage.setItem('token', btoa(JSON.stringify(resposta['token'])));
-        localStorage.setItem('usuario', btoa(JSON.stringify(resposta['usuario'])));
-        this.router.navigate(['']);
-      }));*/
+    // return this._httpClient.post<any>(this.apiUrl + "/api/Auth/Login", usuario).pipe(
+    //   tap((resposta) => {
+    //     if(!resposta.sucesso) return;
+    //     localStorage.setItem('token', btoa(JSON.stringify(resposta['token'])));
+    //     localStorage.setItem('usuario', btoa(JSON.stringify(resposta['usuario'])));
+    //     this._router.navigate(['']);
+    //   }));
     return this.mockUsuarioLogin(usuario).pipe(
       tap((resposta) => {
         if (!resposta.sucesso) return;

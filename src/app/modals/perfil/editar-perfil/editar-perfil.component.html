@@ -5,15 +5,15 @@
     </div>
     <span>Alterar foto de perfil</span>
   </div>
-  <form>
+  <form [formGroup]='formEditarPerfil'>
     <div class="input-container">
-      <label for="nome">Admin</label>
-      <input type="text" name="nome" id="nome" [readOnly]="nomeReadonly">
+      <label for="nome">{{nome}}</label>
+      <input type="text" name="nome" id="nome" [readOnly]="nomeReadonly" formGroupName="nome">
       <img src="../../../../assets/pen _ edit.svg" alt="" (click)="editarNome()">
     </div>
     <div class="input-container">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" [readOnly]="emailReadonly">
+      <input type="email" name="email" id="email" [readOnly]="emailReadonly" formGroupName="email">
       <img src="../../../../assets/pen _ edit.svg" alt="" (click)="editarEmail()">
     </div>  
   </form>

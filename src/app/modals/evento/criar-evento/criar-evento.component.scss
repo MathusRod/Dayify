@@ -1,5 +1,5 @@
 @import "../../../shared/mixin";
-
+@import '../../../../styles.scss';
 .container {
   display: flex;
   flex-direction: column;
@@ -9,8 +9,8 @@
   // height: 736px;
   position: relative;
   h1 {
-    font-size: 36px;
-    color: #424242;
+    font-size: 40px;
+    color: $preto;
     margin-top: 3rem;
   }
   form {
@@ -30,6 +30,7 @@
       align-items: start;
       input{
         padding-left: 10px;
+        border-color:  $principal;
       }
     }
     .input-nome-evento {
@@ -42,30 +43,41 @@
     }
     .data-hora{
       display: flex;
-      justify-content: space-between;
+      gap: 1rem;
       .data{
         position: relative;
         input{
           margin-top: 10px;
           width: 140px;
           height: 30px;
+          color: $principal;
         }
         mat-datepicker-toggle{
           position: absolute;
           left: 100px;
-          bottom: -10px;
+          top: 22px;
         }
       }
       .hora{
-        width: 140px;
+        width: 218px;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        input{
-          margin-top: 10px;
-          width: 70px;
-          height: 30px;
-          padding:0 10px;
-          font-size: 16px;
+        border: 1px solid $principal;
+        label{
+          font-size: 14px;
+        }
+        .inputs{
+          display: flex;
+          gap: 1rem;
+          input{
+            margin-top: 10px;
+            width: 73px;
+            height: 72px;
+            font-size: 45px;
+            background-color: $cinza;
+            color: $preto;
+          }
         }
       }
     }
@@ -76,7 +88,7 @@
         height: 110px;
         resize: none;
         padding: 4px;
-        border: 1.5px solid  black;
+        border: 1.5px solid  $principal;
       }
     }
     .add-convidados{
@@ -98,7 +110,7 @@
   }
 
   .salvar {
-    background-color: #424242;
+    background-color: $principal;
     width: 159px;
     height: 40px;
     text-align: center;
@@ -117,4 +129,13 @@
     height: 30px;
     cursor: pointer;
   }
+}
+.no-spin {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
 }

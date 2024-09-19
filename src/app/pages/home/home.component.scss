@@ -66,7 +66,7 @@
         color: #424242;
         padding: 4px;
         width: 100%;
-        border-bottom: 2px solid #424242;
+        border-bottom: 2px solid $principal;
       }
       .todos-eventos {
         padding: 10px 5px;
@@ -75,18 +75,19 @@
         gap: 1rem;
         overflow-y: scroll;
         height: 350px;
+        width: 300px;
         .evento {
-          width: 257px;
+          width: 255px;
           height: 135px;
           display: flex;
           flex-direction: column;
           padding: 10px;
           justify-content: start;
-          border: 1px solid #424242;
+          border: 1px solid $principal;
           margin: 0 auto;
           h4 {
             font-size: 24px;
-            color: #424242;
+            color: $preto;
           }
           p {
             font-size: 24px;
@@ -100,7 +101,8 @@
             margin-left: auto;
             text-align: end;
             font-size: 24px;
-            color: #424242;
+            color: $principal;
+            cursor: pointer;
           }
         }
       }
@@ -115,14 +117,15 @@
           width: 159px;
           height: 46px;
           color: #fff;
-          background-color: #424242;
+          background-color: $principal;
           border: none;
           font-size: 18px;
         }
       }   
     }
     .calendar {
-      width: 680px;
+      width: 600px;
+      border: 2px solid $principal;
     }
   }
 }
